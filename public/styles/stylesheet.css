@@ -1,0 +1,41 @@
+footer {
+	width: 100%;
+	text-align: center;
+	background-color: black;
+	color: white;
+	line-height: 300%;
+}
+
+main {
+	min-height: 300px;
+	//background-image: url('/images/loginFormBg.jpg');
+}
+
+.nodisplay {
+	display: none;
+}
+
+#titleText {
+	color: blue;
+	text-align: center;
+}
+
+#loginForm input {
+	margin: 10px;
+	padding: 10px;
+}
+
+.tableBox {
+    border: 5px outset green;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.tableinfo {
+    font-size: small;
+}
+
+.tableBox:hover {
+    border: 5px inset green;
+}
+    

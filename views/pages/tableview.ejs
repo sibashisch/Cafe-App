@@ -1,0 +1,47 @@
+<%- contentFor ('contentMain') %>
+
+<main>
+    <div class="container container-fluid">
+        <div class="row">
+            <div class="col-sm-12" style="text-align:center;">
+                <%if (tables) {
+                    let i = 0;
+                    tables.forEach ((table) => {
+                        if ((i % 6) === 0) {
+                            i = 0;
+                        }
+                        i ++; // The serial number of this table
+                        
+                        if (i == 1) {%><div class="row"><%}%>
+                        
+                            <div class="col-sm-2" style="padding: 2px;">
+                                <div class="col-sm-12 tableBox" data-tabno="<%=table.no%>" data-state="<%=table.statecode%>"
+                                        style="background-color:<%=table.color.bg%>; color:<%=table.color.fg%>; border-color:<%=table.color.bg%>;">
+                                    <%=table.no%> <br />
+                                    <span class="tableinfo" data-tabno="<%=table.no%>" data-state="<%=table.statecode%>">
+                                        <%=table.state%><br />
+                                        Waiter: <%=table.waiterName%>
+                                    </span>
+                                </div>    
+                            </div>
+                        
+                        <%if (i == 6) {%></div><%}
+                    });
+                } else {%>
+                    <br />
+                    <div class="alert alert-warning">No Data To Show</div>
+                    <br />
+                <%}%>
+            </div>
+        </div>
+    </div>
+    <br />
+</main>
+
+<script type="text/javascript">
+    $(document).ready (function () {
+        $('.tableBox').click (function (evt) {
+            console.log ($(evt.target).attr ('data-tabno'));
+        });
+    });
+</script>

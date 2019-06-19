@@ -1,0 +1,48 @@
+<%- contentFor ('contentMain') %>
+
+<main>
+	<div class="row">
+		<%
+		let alertClass = 'alert alert-danger';
+
+		if (typeof style !== 'undefined' && style === 'ok') {
+			alertClass = 'alert alert-success';
+		}
+
+		if (typeof text !== 'undefined') { %> 
+			<div class="col-sm-offset-4 col-sm-4 <%= alertClass %>"> <%= text %> </div>
+		<%}%>
+		
+		</div>
+	<div class="row">
+		<div class="col-sm-12" id="loginFormDiv">
+			<form action="/login" method="post" id="loginForm" onsubmit="return validateLoginForm();">
+				<div class="input-group col-sm-offset-4 col-sm-4">
+					<div class="input-group-prepend">
+						<span class="intput-group-text">User Name:</span>
+					</div>
+					<input class="form-control" type="text" id="uname", name="uname" />
+					<div class="alert alert-danger col-sm-12 nodisplay" id="unameAlert">
+						Please enter a valid user name
+					</div>
+				</div>
+				<div class="input-group col-sm-offset-4 col-sm-4">
+					<div class="input-group-prepend">
+						<span class="intput-group-text">Password:</span>
+					</div>
+					<input class="form-control" type="password" id="pswd" name="pswd"/>
+					<div class="alert alert-danger col-sm-12 nodisplay" id="pswdAlert">
+						Please enter a valid password
+					</div>
+				</div>
+				<div class="input-group col-sm-offset-4 col-sm-4">
+					<input type="submit" class="btn btn-primary col-sm-12" value="log in" id="loginSubmit" />
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="col-sm-offset-4 col-sm-4">
+		Having problem? <a href="/contact">Contact Us</a>
+	</div>
+	<br />
+</main>

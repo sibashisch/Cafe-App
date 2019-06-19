@@ -1,0 +1,28 @@
+{
+  "name": "restrobuddy",
+  "version": "0.0.1",
+  "description": "An application to manage order lifecycle in a restaurant or cafe",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.2",
+    "express-session": "^1.16.2",
+    "mongodb": "^3.2.7",
+    "properties-reader": "^0.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sibashisch/Cafe-App.git"
+  },
+  "author": "Sibashis Chatterjee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sibashisch/Cafe-App/issues"
+  },
+  "homepage": "https://github.com/sibashisch/Cafe-App#readme"
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTD-8">
+		<title>Cafe Management</title>
+
+		<script type="text/javascript" src="/scripts/jquery.min.js"></script>
+		<script type="text/javascript" src="/scripts/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/scripts/jscripts.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/styles/stylesheet.css">
+	</head>
+	<body>
+		<head>
+			<div class="row well">
+				<div class="col-sm-offset-2 col-sm-8" id="titleText">
+					<a href="/"><h2>Cafe Buddy</h2></a>
+					<%if (typeof username !== 'undefined') {%>
+						<nav class="navbar navbar-inverse">
+							<a href="#"  class="navbar-brand">Welcome! <%=username%></a>
+							<ul class="nav navbar-nav">
+								<li><a href="/dashboard">Dashboard</a></li>
+								<li><a href="/about">About</a></li>
+								<li><a href="/contact">Contact</a></li>
+								<li><a href="/logout">Log out</a></li>
+							</ul>
+						</nav>
+					<%}%>
+				</div>
+			</div>
+		</head>
+
+		<!-- MAIN CONTENT HERE -->
+		<%- defineContent ('contentMain') %>
+
+		<footer>
+			Cafe Management | Copyright &copy; Sibashis Chatterjee, 2019
+		</footer>
+	</body>
+</html>
